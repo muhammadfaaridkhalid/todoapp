@@ -1,0 +1,437 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo App</title>
+
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+
+
+        <style>
+
+        .main{
+          
+              display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+        </style>
+    </head>
+    <body> -->
+
+        <!-- <div class="" style="margin: auto ;  background-color: black; color: white; border: 1px solid black; border-radius: 19px; width: 50%; display: flex; flex-wrap: wrap; justify-content: center;"> -->
+        
+            <!-- <h1 style=" text-align: center;font-family: Arial, Helvetica, sans-serif;">Todo APP</h1> -->
+        
+
+        <!-- <div class="" style="margin: auto ;  background-color: black; color: white; border: 1px solid black; border-radius: 19px; width: 50%; display: flex; flex-wrap: wrap; justify-content: center;"> -->
+        
+
+        <!-- <div class="main" style="display: flex; justify-content: center;align-items: center;gap: 10px;">
+            <input id="input" placeholder="Enter Items" type="text">
+            <button style="color: black;" onclick="addTodo()">Add Tasks</button>
+            <button onclick="deleteAllTodos()">Delete All Tasks</button>
+        </div>
+
+        <ul id="list"></ul>
+
+
+ -->
+    <!-- </div> -->
+
+
+
+
+        <!-- <script src="todo.js"></script>
+
+    </body>
+
+ </html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+</head>
+<body>
+
+  <div>
+    <input id="input" type="text" placeholder="Add Todo">
+    <button onclick="addTodo()">Add Todo</button>
+  </div>
+
+  <ul id="list"></ul>
+  <button onclick="deleteAllTodos()">Delete All</button>
+
+  <script type="module" src="todo.js"></script>
+  
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+</head>
+<body>
+
+  <div>
+    <input id="input" type="text" placeholder="Add Todo">
+    <button onclick="addTodo()">Add Todo</button>
+  </div>
+
+  <ul id="list"></ul>
+  <button onclick="deleteAllTodos()">Delete All</button> -->
+
+  <!-- Include the Firebase Firestore script -->
+  <script type="module">
+    // Firebase SDK import
+    // import { initializeApp } from "https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js";
+    // import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, updateDoc } from "https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js";
+
+
+
+
+
+
+    // // Firebase configuration
+    // const firebaseConfig = {
+    //   apiKey: "AIzaSyBsjuBO5JWE3ub7-mdCXQ20ZXcHiYnaXsg",
+    //   authDomain: "todoapp-7c920.firebaseapp.com",
+    //   projectId: "todoapp-7c920",
+    //   storageBucket: "todoapp-7c920.appspot.com",
+    //   messagingSenderId: "729485151929",
+    //   appId: "1:729485151929:web:066d14b3e2dc8ca7379568"
+    // };
+
+    // // Initialize Firebase
+    // const app = initializeApp(firebaseConfig);
+    // const db = getFirestore(app);  // Firestore instance
+
+
+    // DOM Element for displaying todos
+    // var ulElement = document.getElementById("list");
+
+    // Fetch and display todos from Firestore
+    // async function fetchTodos() {
+    //   const todosSnapshot = await getDocs(collection(db, "todos"));
+    //   ulElement.innerHTML = '';  // Clear existing list
+    //   todosSnapshot.forEach((doc) => {
+    //     const todo = doc.data();
+    //     const liElement = document.createElement("li");
+    //     const liText = document.createTextNode(todo.text);
+    //     liElement.appendChild(liText);
+
+        // Create delete button
+        // var delBtnElement = document.createElement("button");
+        // var delBtnText = document.createTextNode("Delete");
+        // delBtnElement.appendChild(delBtnText);
+        // delBtnElement.setAttribute("onclick", () => deleteSingleTodo(doc.id));
+        // liElement.appendChild(delBtnElement);
+
+        // Create edit button
+    //     var editBtnElement = document.createElement("button");
+    //     var editBtnText = document.createTextNode("Edit");
+    //     editBtnElement.appendChild(editBtnText);
+    //     editBtnElement.setAttribute("onclick", () => editSingleTodo(doc.id, todo.text));
+    //     liElement.appendChild(editBtnElement);
+
+    //     ulElement.appendChild(liElement);
+    //   });
+    // }
+
+    // Add a new todo to Firestore
+//     // async function addTodo() {
+//     //   var input = document.getElementById("input");
+
+//     //   if (input.value) {
+//     //     try {
+//     //       await addDoc(collection(db, "todos"), {
+//     //         text: input.value
+//     //       });
+//     //       input.value = ""; // Clear the input field
+//     //       fetchTodos(); // Refresh the todo list
+//     //     } catch (e) {
+//     //       console.error("Error adding document: ", e);
+//     //     }
+//     //   } else {
+//     //     alert("Enter todo item");
+//     //   }
+//     // }
+
+//     // // Delete all todos from Firestore
+//     // async function deleteAllTodos() {
+//     //   const todosSnapshot = await getDocs(collection(db, "todos"));
+//     //   todosSnapshot.forEach(async (doc) => {
+//     //     await deleteDoc(doc.ref);
+//     //   });
+//     //   fetchTodos(); // Refresh the todo list
+//     // }
+
+//     // // Delete a single todo from Firestore
+//     // async function deleteSingleTodo(todoId) {
+//       try {
+//         await deleteDoc(doc(db, "todos", todoId));
+//         fetchTodos(); // Refresh the todo list
+//       } catch (e) {
+//         console.error("Error deleting todo: ", e);
+//       }
+//     }
+
+//     // Edit a single todo in Firestore
+//     async function editSingleTodo(todoId, currentText) {
+//       const updateVal = prompt("Enter updated value", currentText);
+//       if (updateVal) {
+//         try {
+//           const todoDocRef = doc(db, "todos", todoId);
+//           await updateDoc(todoDocRef, {
+//             text: updateVal
+//           });
+//           fetchTodos(); // Refresh the todo list
+//         } catch (e) {
+//           console.error("Error updating todo: ", e);
+//         }
+//       }
+//     }
+
+//     // Call fetchTodos when the page loads
+//     window.onload = fetchTodos;
+
+//   </script>
+  
+// </body>
+// </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .todo-container {
+      max-width: 400px;
+      margin: auto;
+    }
+    input {
+      width: 70%;
+      padding: 10px;
+    }
+    button {
+      padding: 10px;
+      cursor: pointer;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 10px 0;
+      background: #f4f4f4;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    li button {
+      background: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Todo App</h1>
+  <div class="todo-container">
+    <input type="text" id="todo-input" placeholder="Add a new todo" />
+    <button onclick="addTodo()">Add</button>
+    <ul id="todo-list"></ul>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+  <script src="app.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .todo-container {
+      max-width: 400px;
+      margin: auto;
+    }
+    input {
+      width: 70%;
+      padding: 10px;
+    }
+    button {
+      padding: 10px;
+      cursor: pointer;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 10px 0;
+      background: #f4f4f4;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    li button {
+      background: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Todo App</h1>
+  <div class="todo-container">
+    <input type="text" id="todo-input" placeholder="Add a new todo" />
+    <button onclick="addTodo()">Add</button>
+    <ul id="todo-list"></ul>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-database.js"></script>
+  <script src="app.js"></script>
+</body>
+</html> -->
